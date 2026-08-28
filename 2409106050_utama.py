@@ -83,3 +83,14 @@ cabang = PerangkatJaringan()
 cabang.tampilkan_laporan(f"Router {id_router}", status_router)
 cabang.tampilkan_laporan(f"Switch {id_switch}", status_switch)
 cabang.tampilkan_laporan(f"Firewall {id_firewall}", status_firewall)
+
+# Analisis Jawaban:
+# 1. Bagian A: Membuat ID Perangkat
+# 2. Bagian B: Pengecekan Status Perangkat
+# 3. Bagian C: Klasifikasi Utilisasi Interface
+# 4. Bagian D: Pemisahan Modul
+# 5. Bagian E: Class Perangkat Jaringan dan Laporan Akhir
+
+# Dengan adanya pemisahan modul membuat kita dapat menerapkan prinsip DRY (Don't Repeat Yourself) atau Reusability (Penggunaan ulang kode) 
+# dan memudahkan pemeliharaan kode.
+# Penerapan class PerangkatJaringan pada Bagian E juga membuat kode lebih terstruktur dan mudah dikembangkan karena menerapkan sistem CLASS
