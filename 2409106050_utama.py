@@ -30,14 +30,14 @@ print(f"ID Firewall: {id_firewall}")
 # BAGIAN B : Pengecekan Status Perangkat
 def cek_status(nama_perangkat, status):
     if status == 'up':
-        print(f"Status dari perangkat {nama_perangkat} : UP")
+        print(f"Status dari perangkat {nama_perangkat} : up")
     else:
-        print(f"Status dari perangkat {nama_perangkat} : DOWN")
+        print(f"Status dari perangkat {nama_perangkat} : down")
 
 # Variabel Status Perangkat
-status_router = 'UP'
-status_switch = 'DOWN'
-status_firewall = 'UP'
+status_router = 'up'
+status_switch = 'down'
+status_firewall = 'up'
 
 cek_status(f"Router {id_router}", status_router)
 cek_status(f"Switch {id_switch}", status_switch)
@@ -45,7 +45,7 @@ cek_status(f"Firewall {id_firewall}", status_firewall)
 print()
 
 # BAGIAN C : Function Klasifikasi Utilisasi Interface
-def klasifikasi_utilisasi(nama_perangkat, in_uti, out_uti):
+def klasifikasi_utilisasi(nama_interface, in_uti, out_uti):
     rata_rata = (in_uti + out_uti) / 2
     if rata_rata < 50:
         klasifikasi = "NORMAL"
@@ -53,4 +53,18 @@ def klasifikasi_utilisasi(nama_perangkat, in_uti, out_uti):
         klasifikasi = "WASPADA"
     else:
         klasifikasi = "KRITIS"
+
+    print(f"Interface: {nama_interface:<12} | Traffic In: {in_uti:>2}% | Traffic Out: {out_uti:>2}% | Rata-rata: {rata_rata:>4.1f}% : [{klasifikasi}]")
+    return klasifikasi
+
+# 2409106050
+# 1. Level KRITIS (> 80) -> rata-rata: (91 + 91)/2 = 91.0%
+klasifikasi_utilisasi("gi0/0 (RTR)", in_uti=91, out_uti=91)
+
+# 2. Level WASPADA (50 - 80) -> rata-rata: (50 + 60)/2 = 55.0%
+klasifikasi_utilisasi("fa0/1 (SW)", in_uti=50, out_uti=60)
+
+# 3. Level NORMAL (< 50) -> rata-rata: (24 + 0)/2 = 12.0%
+klasifikasi_utilisasi("eth0 (FW)", in_uti=24, out_uti=0)
+print()
 
