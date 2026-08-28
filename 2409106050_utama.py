@@ -26,3 +26,10 @@ print(f"ID Router: {id_router}")
 print(f"ID Switch: {id_switch}")
 print(f"ID Firewall: {id_firewall}")
 
+# BAGIAN B : Pengecekan Status Perangkat
+def cek_status_perangkat(nama_perangkat, status):
+    if status == 'up':
+        print(f"Status dari perangkat {nama_perangkat} : UP")
+    else:
+        print(f"Status dari perangkat {nama_perangkat} : DOWN")
+
