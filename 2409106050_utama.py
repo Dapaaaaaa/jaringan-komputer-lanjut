@@ -11,21 +11,18 @@ def buat_id_perangkat(jenis, kode_cabang, nomor):
     id_perangkat = f"{jenis}-{kode_cabang}-{nomor:02d}"
     return id_perangkat
 
-# Alasan menggunakan importlib karena modul gabisa di panggil kalau menggunakan nama file awalan angka
-import importlib
-
-# Kita buat variabel untuk memanggil modul dari file 2409106050_modul.py
-modul = importlib.import_module('2409106050_modul')
-# ini adalah contoh pemanggilan fungsi untuk buat_id_perangkat dari modul
-buat_id_perangkat = modul.buat_id_perangkat
-
 # BAGIAN A : Identitas Cabang dan Pembuatan ID Perangkat
 nim = "2409106050"
 nama = "Ananda Daffa Harahap"
-kode_cabang = nim[3:]
+kode_cabang = nim[-3:]
 
 # Membuat ID
 id_router = buat_id_perangkat('RTR', kode_cabang, 1)
 id_switch = buat_id_perangkat('SW', kode_cabang, 1)
 id_firewall = buat_id_perangkat('FW', kode_cabang, 1)
+
+# print pembuatan id
+print(f"ID Router: {id_router}")
+print(f"ID Switch: {id_switch}")
+print(f"ID Firewall: {id_firewall}")
 
