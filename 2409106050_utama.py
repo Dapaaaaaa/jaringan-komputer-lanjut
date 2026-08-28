@@ -7,6 +7,11 @@ Tujuan    : Program ini adalah program utama untuk menjalankan manajemen jaringa
 Nama pembuat : Ananda Daffa Harahap 
 '''
 
+import importlib
+
+modul = importlib.import_module('2409106050_modul')
+buat_id_perangkat = modul.buat_id_perangkat
+
 # BAGIAN A : Identitas Cabang dan Pembuatan ID Perangkat
 nim = "2409106050"
 nama = "Ananda Daffa Harahap"
@@ -74,3 +79,7 @@ class PerangkatJaringan:
             print(f"Status dari perangkat {nama_perangkat} : down")
         print(f"{nama_perangkat} : {status}")
 
+cabang = PerangkatJaringan()
+cabang.tampilkan_laporan(f"Router {id_router}", status_router)
+cabang.tampilkan_laporan(f"Switch {id_switch}", status_switch)
+cabang.tampilkan_laporan(f"Firewall {id_firewall}", status_firewall)
