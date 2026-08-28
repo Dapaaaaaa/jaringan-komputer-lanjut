@@ -19,3 +19,7 @@ nim = "2409106050"
 nama = "Ananda Daffa Harahap"
 kode_cabang = nim[3:]
 
+# Membuat ID
+id_router = buat_id_perangkat('RTR', kode_cabang, 1)
+id_switch = buat_id_perangkat('SW', kode_cabang, 1)
+id_firewall = buat_id_perangkat('FW', kode_cabang, 1)
