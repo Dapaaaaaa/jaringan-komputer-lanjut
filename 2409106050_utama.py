@@ -7,11 +7,6 @@ Tujuan    : Program ini adalah program utama untuk menjalankan manajemen jaringa
 Nama pembuat : Ananda Daffa Harahap 
 '''
 
-# Membuat modul sesuai perintah soal A
-def buat_id_perangkat(jenis, kode_cabang, nomor):
-    id_perangkat = f"{jenis}-{kode_cabang}-{nomor:02d}"
-    return id_perangkat
-
 # BAGIAN A : Identitas Cabang dan Pembuatan ID Perangkat
 nim = "2409106050"
 nama = "Ananda Daffa Harahap"
