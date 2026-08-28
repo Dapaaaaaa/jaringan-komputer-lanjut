@@ -21,7 +21,7 @@ id_router = buat_id_perangkat('RTR', kode_cabang, 1)
 id_switch = buat_id_perangkat('SW', kode_cabang, 1)
 id_firewall = buat_id_perangkat('FW', kode_cabang, 1)
 
-# print pembuatan id
+# Print ID Perangkat
 print(f"ID Router: {id_router}")
 print(f"ID Switch: {id_switch}")
 print(f"ID Firewall: {id_firewall}")
@@ -33,3 +33,11 @@ def cek_status_perangkat(nama_perangkat, status):
     else:
         print(f"Status dari perangkat {nama_perangkat} : DOWN")
 
+# Variabel Status Perangkat
+status_router = 'UP'
+status_switch = 'DOWN'
+status_firewall = 'UP'
+
+cek_status(f"Router {id_router}", status_router)
+cek_status(f"Switch {id_switch}", status_switch)
+cek_status(f"Firewall {id_firewall}", status_firewall)
