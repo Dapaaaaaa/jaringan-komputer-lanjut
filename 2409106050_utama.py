@@ -14,3 +14,8 @@ modul = importlib.import_module('2409106050_modul')
 # ini adalah contoh pemanggilan fungsi untuk buat_id_perangkat dari modul
 buat_id_perangkat = modul.buat_id_perangkat
 
+# BAGIAN A : Identitas Cabang dan Pembuatan ID Perangkat
+nim = "2409106050"
+nama = "Ananda Daffa Harahap"
+kode_cabang = nim[3:]
+
