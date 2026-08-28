@@ -6,6 +6,7 @@ Nama File : 2409106050_utama.py
 Tujuan    : Program ini adalah program utama untuk menjalankan manajemen jaringan kantor cabang virtual
 Nama pembuat : Ananda Daffa Harahap 
 '''
+
 # Membuat modul sesuai perintah soal A
 def buat_id_perangkat(jenis, kode_cabang, nomor):
     id_perangkat = f"{jenis}-{kode_cabang}-{nomor:02d}"
@@ -42,3 +43,14 @@ cek_status(f"Router {id_router}", status_router)
 cek_status(f"Switch {id_switch}", status_switch)
 cek_status(f"Firewall {id_firewall}", status_firewall)
 print()
+
+# BAGIAN C : Function Klasifikasi Utilisasi Interface
+def klasifikasi_utilisasi(nama_perangkat, in_uti, out_uti):
+    rata_rata = (in_uti + out_uti) / 2
+    if rata_rata < 50:
+        klasifikasi = "NORMAL"
+    elif 50 <= rata_rata < 80:
+        klasifikasi = "WASPADA"
+    else:
+        klasifikasi = "KRITIS"
+
