@@ -68,3 +68,14 @@ klasifikasi_utilisasi("fa0/1 (SW)", in_uti=50, out_uti=60)
 klasifikasi_utilisasi("eth0 (FW)", in_uti=24, out_uti=0)
 print()
 
+# BAGIAN D : Misah Modul jadi ke file 2409106050_modul.py
+
+# BAGIAN E : Class Perangkat Jaringan dan Laporan Akhir
+class PerangkatJaringan:
+    def tampilkan_laporan(self, nama_perangkat, status):
+        if status == 'up':
+            print(f"Status dari perangkat {nama_perangkat} : up")
+        else:
+            print(f"Status dari perangkat {nama_perangkat} : down")
+        print(f"{nama_perangkat} : {status}")
+
